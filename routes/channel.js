@@ -1,9 +1,9 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
 const KMT = require('../lib/KMTClass');
+const settings = require('../lib/settings');
 
-
-m = new KMT('192.168.0.6',12345);
+m = new KMT(settings.KMTDevice.host,settings.KMTDevice.port, settings.listeningPort);
 
 
 router.route('/')
